@@ -1,3 +1,5 @@
+import { iniciarJogo } from "./jogo.js";
+
 const menu = document.querySelector("#menu")
 const jogo = document.querySelector("#jogo")
 const selecaoSonic = document.querySelector("#botao-selecao-sonic");
@@ -22,6 +24,7 @@ selecaoSonic.addEventListener("click", () => {
     menu.style.display = "none";
     jogo.style.display = "flex";
     personagemEscolhido = "Sonic";
+    iniciarJogo(personagemEscolhido);
 })
 
 selecaoShadow.addEventListener("mouseover", () => {
@@ -40,6 +43,6 @@ selecaoShadow.addEventListener("click", () => {
     menu.style.display = "none";
     jogo.style.display = "flex";
     personagemEscolhido = "Shadow";
+    iniciarJogo(personagemEscolhido);
 })
 
-export {personagemEscolhido};
