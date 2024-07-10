@@ -5,8 +5,6 @@ section.jogo{
     height: 100vh;
     background: url("./../img/backgrounds/greenhill.png");
     background-size: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 .chao{
@@ -22,4 +20,6 @@ section.jogo{
 .sprite-personagem{
     position: absolute;
     width: 100px;
+    bottom: 30%;
+    left: 30%;
 }
