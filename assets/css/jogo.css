@@ -30,5 +30,7 @@ section.jogo{
     width: 100px;
     bottom: 30%;
     left: 110%;
-    animation : andarInimigo 5s infinite linear;
+    animation : andarInimigo 3s infinite linear;
 }
+/* 35% encostou */
+/* 22% passou */

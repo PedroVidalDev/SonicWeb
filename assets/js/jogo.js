@@ -19,6 +19,12 @@ function iniciarJogo(personagemEscolhido){
             }, 800)
         }
     })
+
+    setInterval(() => {
+        if((Number(spriteInimigo.offsetLeft) <= window.innerWidth * 0.35) && (Number(spriteInimigo.offsetLeft) >= window.innerWidth * 0.22) && (window.getComputedStyle(spritePersonagem).bottom.replace('px', '') < window.innerHeight * 0.4)){
+            console.log("bateu")
+        }
+    }, 10)
 }
 
 export {iniciarJogo}
