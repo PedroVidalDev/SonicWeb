@@ -1,0 +1,29 @@
+.opacidadeEntrada{
+    animation: fadein 0.2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.opacidadeSaida{
+    animation: fadeout 0.2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    0%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeout {
+    0%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0%;
+    }
+}
