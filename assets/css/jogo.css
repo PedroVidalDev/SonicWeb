@@ -5,6 +5,7 @@ section.jogo{
     height: 100vh;
     background: url("./../img/backgrounds/greenhill.png");
     background-size: cover;
+    overflow: hidden;
 }
 
 .chao{
@@ -22,4 +23,12 @@ section.jogo{
     width: 100px;
     bottom: 30%;
     left: 30%;
+}
+
+.sprite-inimigo{
+    position: absolute;
+    width: 100px;
+    bottom: 30%;
+    left: 110%;
+    animation : andarInimigo 5s infinite linear;
 }
