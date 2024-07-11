@@ -1,6 +1,10 @@
 function iniciarJogo(personagemEscolhido){
     const spritePersonagem = document.querySelector("#sprite-personagem");
     const spriteInimigo = document.querySelector("#sprite-inimigo");
+    const legendaPontuacao = document.querySelector("#pontuacao")
+
+    let pontuacao = 0;
+    let perdeu = false;
     
     if(personagemEscolhido == "Sonic"){
         spritePersonagem.src = "./assets/img/sprites/sonic/sonic-correndo.gif";
@@ -24,8 +28,14 @@ function iniciarJogo(personagemEscolhido){
         if((Number(spriteInimigo.offsetLeft) <= window.innerWidth * 0.35) && (Number(spriteInimigo.offsetLeft) >= window.innerWidth * 0.22) && (window.getComputedStyle(spritePersonagem).bottom.replace('px', '') < window.innerHeight * 0.4)){
             spriteInimigo.style.animation = "none";
             spriteInimigo.style.left = spriteInimigo.offsetLeft + "px";
+
         }
     }, 10)
+
+    setInterval(() => {
+        pontuacao++;
+        legendaPontuacao.innerHTML = `${pontuacao}m`
+    }, 200)
 }
 
 export {iniciarJogo}

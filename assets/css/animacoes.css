@@ -55,3 +55,23 @@
         left: -10%;
     }
 }
+
+@keyframes movimentoChao {
+    0%{
+        right: -100%;
+    }
+
+    100%{
+        right: 0%;
+    }
+}
+
+@keyframes movimentoChaoDois {
+    0%{
+        right: 0%;
+    }
+
+    100%{
+        right: 100%;
+    }
+}
