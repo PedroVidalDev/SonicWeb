@@ -1,4 +1,6 @@
 function iniciarJogo(personagemEscolhido){
+
+    const caminho = `./assets/img/sprites/${personagemEscolhido}/`;
     
     const somDeFundo = document.querySelector("#som-de-fundo");
     somDeFundo.play();
@@ -15,15 +17,11 @@ function iniciarJogo(personagemEscolhido){
     let pontuacao = 0;
     let perdeu = false;
     
-    if(personagemEscolhido == "Sonic"){
-        spritePersonagem.src = "./assets/img/sprites/sonic/sonic-correndo.gif";
-    } else{
-        spritePersonagem.src = "./assets/img/sprites/shadow/shadow-correndo.png";
-    }
+    spritePersonagem.src = caminho + "sonic-correndo.gif";
 
     document.addEventListener("keydown", (event) => { 
         if(event.key === "ArrowUp"){
-            spritePersonagem.src = "./assets/img/sprites/sonic/sonic-pulando.gif";
+            spritePersonagem.src = caminho + "sonic-pulando.gif";
             spritePersonagem.classList.add("pulo");
             
             somPulo.play();
@@ -37,11 +35,7 @@ function iniciarJogo(personagemEscolhido){
     setInterval(() => {
         if((Number(spriteInimigo.offsetLeft) <= window.innerWidth * 0.35) && (Number(spriteInimigo.offsetLeft) >= window.innerWidth * 0.22) && (window.getComputedStyle(spritePersonagem).bottom.replace('px', '') < window.innerHeight * 0.4)){
             
-            if(personagemEscolhido == "Sonic"){
-                spritePersonagem.src = "./assets/img/sprites/sonic/sonic-perdedor.png";
-            } else{
-                spritePersonagem.src = "./assets/img/sprites/sonic/shadow-perdedor.png";
-            }
+            spritePersonagem.src = caminho + "sonic-perdedor.png";
 
             spriteInimigo.style.left = spriteInimigo.offsetLeft + "px";
             spriteInimigo.style.animation = "none";
