@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/animacoes.css">
     <link rel="stylesheet" href="./assets/css/menu.css">
     <link rel="stylesheet" href="./assets/css/jogo.css">
+    <link rel="stylesheet" href="./assets/css/tela-perdeu.css">
     <title>Sonic Web</title>
 </head>
 <header></header>
@@ -35,10 +36,18 @@
         <div id="chao-segundo" class="chao-segundo"> </div>
     </section>
 
+    <section class="tela-perdeu" id="tela-perdeu">
+        <p id="mensagem-perdeu" class="mensagem-perdeu"></p>
+        <label class="label-nome" for="nome"> Digite seu nome para registrar! </label>
+        <input type="text" name="nome" id="nome" class="input-nome">
+        <button class="enviar-nome"> Enviar! </button>
+    </section>
+
     <audio id="som-de-fundo" src="./assets/audio/greenhilaudio.mp3"></audio>
     <audio id="som-pulo" src="./assets/audio/jump.mp3"></audio>
 </body>
 <footer></footer>
 <script src="./assets/js/menu.js" type="module"></script>
 <script src="./assets/js/jogo.js" type="module"></script>
+<script src="./assets/js/tela-perdeu.js" type="module"></script>
 </html>

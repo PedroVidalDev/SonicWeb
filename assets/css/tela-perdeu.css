@@ -1,0 +1,55 @@
+section.tela-perdeu{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: url("./../img/backgrounds/greenhill.png");
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.mensagem-perdeu{
+    position: relative;
+    font-size: 2rem;
+    color: white;
+    font-family: "Lilita One", sans-serif;
+}
+
+.label-nome{
+    position: relative;
+    font-size: 0.7rem;
+    color: white;
+    font-family: "Lilita One", sans-serif;
+}
+
+.input-nome{
+    position: relative;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    border: 0;
+    border-radius: 15px;
+    font-family: "Lilita One", sans-serif;
+    margin-top: 10px;
+    font-size: 0.5rem;
+}
+
+.enviar-nome{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    border: 0;
+    border-radius: 15px;
+    font-family: "Lilita One", sans-serif;
+    margin-top: 10px;
+    font-size: 0.5rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.enviar-nome:hover{
+    color: yellow;
+    transform: scale(110%);
+}

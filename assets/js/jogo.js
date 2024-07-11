@@ -1,3 +1,5 @@
+import { telaPerdeu } from "./tela-perdeu.js";
+
 function iniciarJogo(personagemEscolhido){
 
     const caminho = `./assets/img/sprites/${personagemEscolhido}/`;
@@ -56,6 +58,8 @@ function iniciarJogo(personagemEscolhido){
 
             perdeu = true;
             somDeFundo.pause();
+
+            telaPerdeu(personagemEscolhido, pontuacao);
         }
     }, 10)
 
