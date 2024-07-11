@@ -37,6 +37,12 @@ function iniciarJogo(personagemEscolhido){
     setInterval(() => {
         if((Number(spriteInimigo.offsetLeft) <= window.innerWidth * 0.35) && (Number(spriteInimigo.offsetLeft) >= window.innerWidth * 0.22) && (window.getComputedStyle(spritePersonagem).bottom.replace('px', '') < window.innerHeight * 0.4)){
             
+            if(personagemEscolhido == "Sonic"){
+                spritePersonagem.src = "./assets/img/sprites/sonic/sonic-perdedor.png";
+            } else{
+                spritePersonagem.src = "./assets/img/sprites/sonic/shadow-perdedor.png";
+            }
+
             spriteInimigo.style.left = spriteInimigo.offsetLeft + "px";
             spriteInimigo.style.animation = "none";
 
