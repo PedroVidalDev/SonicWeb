@@ -19,7 +19,7 @@ function iniciarJogo(personagemEscolhido){
     
     spritePersonagem.src = caminho + "sonic-correndo.gif";
 
-    document.addEventListener("keydown", (event) => { 
+    function acaoPular(){
         spritePersonagem.src = caminho + "sonic-pulando.gif";
         spritePersonagem.classList.add("pulo");
         
@@ -28,6 +28,14 @@ function iniciarJogo(personagemEscolhido){
             spritePersonagem.classList.remove("pulo");
             spritePersonagem.src = "./assets/img/sprites/sonic/sonic-correndo.gif";
         }, 800)
+    }
+
+    document.addEventListener("keydown", (event) => { 
+        acaoPular();
+    })
+
+    document.addEventListener("click", (event) => { 
+        acaoPular();
     })
 
     setInterval(() => {
