@@ -1,11 +1,16 @@
 function iniciarJogo(personagemEscolhido){
     
-    const audio = document.querySelector("audio");
-    audio.play();
+    const somDeFundo = document.querySelector("#som-de-fundo");
+    somDeFundo.play();
+
+    const somPulo = document.querySelector("#som-pulo");
 
     const spritePersonagem = document.querySelector("#sprite-personagem");
     const spriteInimigo = document.querySelector("#sprite-inimigo");
     const legendaPontuacao = document.querySelector("#pontuacao")
+
+    const chao = document.querySelector("#chao");
+    const chaoSegundo = document.querySelector("#chao-segundo")
 
     let pontuacao = 0;
     let perdeu = false;
@@ -21,6 +26,7 @@ function iniciarJogo(personagemEscolhido){
             spritePersonagem.src = "./assets/img/sprites/sonic/sonic-pulando.gif";
             spritePersonagem.classList.add("pulo");
             
+            somPulo.play();
             setTimeout(() => {
                 spritePersonagem.classList.remove("pulo");
                 spritePersonagem.src = "./assets/img/sprites/sonic/sonic-correndo.gif";
@@ -33,7 +39,15 @@ function iniciarJogo(personagemEscolhido){
             
             spriteInimigo.style.left = spriteInimigo.offsetLeft + "px";
             spriteInimigo.style.animation = "none";
+
+            chao.style.left = chao.offsetRight + "px";
+            chao.style.animation = "none";
+
+            chaoSegundo.style.left = chaoSegundo.offsetRight + "px";
+            chaoSegundo.style.animation = "none";
+
             perdeu = true;
+            somDeFundo.pause();
         }
     }, 10)
 
