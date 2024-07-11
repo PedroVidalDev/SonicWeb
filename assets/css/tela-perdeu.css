@@ -15,6 +15,7 @@ section.tela-perdeu{
     font-size: 2rem;
     color: white;
     font-family: "Lilita One", sans-serif;
+    text-align: center;
 }
 
 .label-nome{
@@ -52,4 +53,48 @@ section.tela-perdeu{
 .enviar-nome:hover{
     color: yellow;
     transform: scale(110%);
+}
+
+@media (max-width: 816px) {
+    .mensagem-perdeu{
+        font-size: 1rem;
+    }
+
+    .label-nome{
+        font-size: 0.4rem;
+    }
+    
+    .input-nome{
+        width: 250px;
+        height: 50px;
+        font-size: 0.5rem;
+    }
+
+    .enviar-nome{
+        width: 200px;
+        height: 50px;
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 434px) {
+    .mensagem-perdeu{
+        font-size: 0.7rem;
+    }
+
+    .label-nome{
+        font-size: 0.2rem;
+    }
+    
+    .input-nome{
+        width: 200px;
+        height: 50px;
+        font-size: 0.5rem;
+    }
+
+    .enviar-nome{
+        width: 170px;
+        height: 50px;
+        font-size: 0.5rem;
+    }
 }

@@ -82,3 +82,17 @@ section.menu{
 .botao-sair:hover, .botao-ranking:hover{
     color: yellow;
 }
+
+@media(max-width: 787px){
+    .menu-titulo{
+        width: 400px;
+    }
+
+    .botao-sair{
+        font-size: 0.6rem;
+    }
+    
+    .botao-ranking{
+        font-size: 0.6rem;
+    }
+}
