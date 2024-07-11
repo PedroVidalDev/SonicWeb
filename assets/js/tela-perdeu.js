@@ -6,6 +6,11 @@ function telaPerdeu(personagem, pontuacao){
 
     const mensagem = document.querySelector("#mensagem-perdeu");
     mensagem.innerHTML = `Parabéns, você correu ${pontuacao}m!`
+
+    const botaoEnviarNome = document.querySelector("#enviar-nome");
+    botaoEnviarNome.addEventListener("click", () => {
+        window.location.reload(true)
+    })
 }
 
 export {telaPerdeu};
