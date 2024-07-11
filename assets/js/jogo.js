@@ -26,14 +26,26 @@ function iniciarJogo(personagemEscolhido){
 
     setInterval(() => {
         if((Number(spriteInimigo.offsetLeft) <= window.innerWidth * 0.35) && (Number(spriteInimigo.offsetLeft) >= window.innerWidth * 0.22) && (window.getComputedStyle(spritePersonagem).bottom.replace('px', '') < window.innerHeight * 0.4)){
-            spriteInimigo.style.animation = "none";
+            
             spriteInimigo.style.left = spriteInimigo.offsetLeft + "px";
-
+            spriteInimigo.style.animation = "none";
+            perdeu = true;
         }
     }, 10)
 
+    let velocidade = 3;
     setInterval(() => {
-        pontuacao++;
+        if(!perdeu){
+            spriteInimigo.style.animation = `andarInimigo ${velocidade}s infinite linear`;
+            velocidade = velocidade - 0.01;
+        }
+    }, 5000)
+
+    setInterval(() => {
+        if(!perdeu){
+            pontuacao++;
+        }
+        
         legendaPontuacao.innerHTML = `${pontuacao}m`
     }, 200)
 }
