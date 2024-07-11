@@ -23,7 +23,7 @@ selecaoSonic.addEventListener("mouseout", () => {
 selecaoSonic.addEventListener("click", () => {
     menu.style.display = "none";
     jogo.style.display = "flex";
-    personagemEscolhido = "Sonic";
+    personagemEscolhido = "sonic";
     iniciarJogo(personagemEscolhido);
 })
 
@@ -42,7 +42,7 @@ selecaoShadow.addEventListener("mouseout", () => {
 selecaoShadow.addEventListener("click", () => {
     menu.style.display = "none";
     jogo.style.display = "flex";
-    personagemEscolhido = "Shadow";
+    personagemEscolhido = "shadow";
     iniciarJogo(personagemEscolhido);
 })
 

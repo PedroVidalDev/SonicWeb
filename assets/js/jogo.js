@@ -3,6 +3,7 @@ import { telaPerdeu } from "./tela-perdeu.js";
 function iniciarJogo(personagemEscolhido){
 
     const caminho = `./assets/img/sprites/${personagemEscolhido}/`;
+    console.log(caminho)
     
     const somDeFundo = document.querySelector("#som-de-fundo");
     somDeFundo.play();
@@ -19,17 +20,17 @@ function iniciarJogo(personagemEscolhido){
     let pontuacao = 0;
     let perdeu = false;
     
-    spritePersonagem.src = caminho + "sonic-correndo.gif";
+    spritePersonagem.src = caminho + `${personagemEscolhido}-correndo.gif`;
 
     function acaoPular(){
         if(!perdeu){
-            spritePersonagem.src = caminho + "sonic-pulando.gif";
+            spritePersonagem.src = caminho + `${personagemEscolhido}-pulando.gif`;
             spritePersonagem.classList.add("pulo");
             
             somPulo.play();
             setTimeout(() => {
                 spritePersonagem.classList.remove("pulo");
-                spritePersonagem.src = "./assets/img/sprites/sonic/sonic-correndo.gif";
+                spritePersonagem.src = caminho + `${personagemEscolhido}-correndo.gif`;
             }, 800)
         }
     }
@@ -45,7 +46,7 @@ function iniciarJogo(personagemEscolhido){
     setInterval(() => {
         if((Number(spriteInimigo.offsetLeft) <= window.innerWidth * 0.35) && (Number(spriteInimigo.offsetLeft) >= window.innerWidth * 0.22) && (window.getComputedStyle(spritePersonagem).bottom.replace('px', '') < window.innerHeight * 0.4)){
             
-            spritePersonagem.src = caminho + "sonic-perdedor.png";
+            spritePersonagem.src = caminho + `${personagemEscolhido}-perdedor.png`;
 
             spriteInimigo.style.left = spriteInimigo.offsetLeft + "px";
             spriteInimigo.style.animation = "none";
