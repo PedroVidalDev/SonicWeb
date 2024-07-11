@@ -1,4 +1,8 @@
 function iniciarJogo(personagemEscolhido){
+    
+    const audio = document.querySelector("audio");
+    audio.play();
+
     const spritePersonagem = document.querySelector("#sprite-personagem");
     const spriteInimigo = document.querySelector("#sprite-inimigo");
     const legendaPontuacao = document.querySelector("#pontuacao")

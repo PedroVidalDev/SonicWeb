@@ -58,3 +58,27 @@ section.menu{
     margin-top: 50px;
     opacity: 0%;
 }
+
+.botao-sair{
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    font-size: 1rem;
+    color: white;
+    font-family: "Lilita One", sans-serif;
+    transition: .5s;
+}
+
+.botao-ranking{
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 1rem;
+    color: white;
+    font-family: "Lilita One", sans-serif;
+    transition: .5s;
+}
+
+.botao-sair:hover, .botao-ranking:hover{
+    color: yellow;
+}
