@@ -20,16 +20,14 @@ function iniciarJogo(personagemEscolhido){
     spritePersonagem.src = caminho + "sonic-correndo.gif";
 
     document.addEventListener("keydown", (event) => { 
-        if(event.key === "ArrowUp"){
-            spritePersonagem.src = caminho + "sonic-pulando.gif";
-            spritePersonagem.classList.add("pulo");
-            
-            somPulo.play();
-            setTimeout(() => {
-                spritePersonagem.classList.remove("pulo");
-                spritePersonagem.src = "./assets/img/sprites/sonic/sonic-correndo.gif";
-            }, 800)
-        }
+        spritePersonagem.src = caminho + "sonic-pulando.gif";
+        spritePersonagem.classList.add("pulo");
+        
+        somPulo.play();
+        setTimeout(() => {
+            spritePersonagem.classList.remove("pulo");
+            spritePersonagem.src = "./assets/img/sprites/sonic/sonic-correndo.gif";
+        }, 800)
     })
 
     setInterval(() => {
